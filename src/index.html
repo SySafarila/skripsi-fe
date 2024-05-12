@@ -32,69 +32,152 @@
             <p class="text-center py-3 px-4 text-xs">Program ini dibuat untuk menyelesaikan pendidikan</p>
         </div>
         <div id="content">
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur optio natus, dolorem cum, ipsa
-                harum
-                aspernatur molestias quam eum quis culpa beatae ut odit! Error, aut. Voluptatem officiis consequatur
-                cumque.
-            </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque recusandae vitae tenetur veniam rem fuga
-                molestias iusto mollitia distinctio, iure odio corrupti, labore eveniet illum cupiditate autem, aliquid
-                quos
-                quae.</p>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur optio natus, dolorem cum, ipsa
-                harum
-                aspernatur molestias quam eum quis culpa beatae ut odit! Error, aut. Voluptatem officiis consequatur
-                cumque.
-            </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque recusandae vitae tenetur veniam rem fuga
-                molestias iusto mollitia distinctio, iure odio corrupti, labore eveniet illum cupiditate autem, aliquid
-                quos
-                quae.</p>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur optio natus, dolorem cum, ipsa
-                harum
-                aspernatur molestias quam eum quis culpa beatae ut odit! Error, aut. Voluptatem officiis consequatur
-                cumque.
-            </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque recusandae vitae tenetur veniam rem fuga
-                molestias iusto mollitia distinctio, iure odio corrupti, labore eveniet illum cupiditate autem, aliquid
-                quos
-                quae.</p>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur optio natus, dolorem cum, ipsa
-                harum
-                aspernatur molestias quam eum quis culpa beatae ut odit! Error, aut. Voluptatem officiis consequatur
-                cumque.
-            </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque recusandae vitae tenetur veniam rem fuga
-                molestias iusto mollitia distinctio, iure odio corrupti, labore eveniet illum cupiditate autem, aliquid
-                quos
-                quae.</p>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur optio natus, dolorem cum, ipsa
-                harum
-                aspernatur molestias quam eum quis culpa beatae ut odit! Error, aut. Voluptatem officiis consequatur
-                cumque.
-            </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque recusandae vitae tenetur veniam rem fuga
-                molestias iusto mollitia distinctio, iure odio corrupti, labore eveniet illum cupiditate autem, aliquid
-                quos
-                quae.</p>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur optio natus, dolorem cum, ipsa
-                harum
-                aspernatur molestias quam eum quis culpa beatae ut odit! Error, aut. Voluptatem officiis consequatur
-                cumque.
-            </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque recusandae vitae tenetur veniam rem fuga
-                molestias iusto mollitia distinctio, iure odio corrupti, labore eveniet illum cupiditate autem, aliquid
-                quos
-                quae.</p>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur optio natus, dolorem cum, ipsa
-                harum
-                aspernatur molestias quam eum quis culpa beatae ut odit! Error, aut. Voluptatem officiis consequatur
-                cumque.
-            </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque recusandae vitae tenetur veniam rem fuga
-                molestias iusto mollitia distinctio, iure odio corrupti, labore eveniet illum cupiditate autem, aliquid
-                quos
-                quae.</p>
+            <form class="flex justify-center gap-2 lg:justify-start">
+                <select name="kpi" id="" class="rounded-md border px-4 py-2 appearance-none"
+                    onchange="event.preventDefault(); this.closest('form').submit();">
+                    <option value="">Periode Aktif</option>
+                    <option value="b">Periode B</option>
+                    <option value="c">Periode C</option>
+                </select>
+                <select name="users" id="" class="rounded-md border px-4 py-2 appearance-none"
+                    onchange="event.preventDefault(); this.closest('form').submit();">
+                    <option value="">Semua Karyawan</option>
+                    <option value="y">Dosen</option>
+                    <option value="z">Staff</option>
+                </select>
+            </form>
+            <div class="flex flex-col py-2 divide-y">
+                <div class="py-4" id="user-points">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-2">
+                            <div class="w-8 h-8 bg-gray-300"></div>
+                            <div class="w-10 h-10 bg-gray-300 rounded-full"></div>
+                            <div class="flex items-center gap-2">
+                                <a href="#">Syahrul S</a>
+                                <span class="cursor-pointer"
+                                    onclick="event.preventDefault(); this.closest('#user-points').querySelector('#detail-points').classList.toggle('hidden');">v</span>
+                            </div>
+                        </div>
+                        <span>100 XP</span>
+                    </div>
+                    <div class="flex flex-col hidden" id="detail-points">
+                        <div class="flex items-center gap-2 justify-end">
+                            <span>XXXX</span>
+                            <span>-</span>
+                            <span>100 XP</span>
+                        </div>
+                        <div class="flex items-center gap-2 justify-end">
+                            <span>XXXX</span>
+                            <span>-</span>
+                            <span>100 XP</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="py-4" id="user-points">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-2">
+                            <div class="w-8 h-8 bg-gray-300"></div>
+                            <div class="w-10 h-10 bg-gray-300 rounded-full"></div>
+                            <div class="flex items-center gap-2">
+                                <a href="#">Syahrul S</a>
+                                <span class="cursor-pointer"
+                                    onclick="event.preventDefault(); this.closest('#user-points').querySelector('#detail-points').classList.toggle('hidden');">v</span>
+                            </div>
+                        </div>
+                        <span>100 XP</span>
+                    </div>
+                    <div class="flex flex-col hidden" id="detail-points">
+                        <div class="flex items-center gap-2 justify-end">
+                            <span>XXXX</span>
+                            <span>-</span>
+                            <span>100 XP</span>
+                        </div>
+                        <div class="flex items-center gap-2 justify-end">
+                            <span>XXXX</span>
+                            <span>-</span>
+                            <span>100 XP</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="py-4" id="user-points">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-2">
+                            <div class="w-8 h-8 bg-gray-300"></div>
+                            <div class="w-10 h-10 bg-gray-300 rounded-full"></div>
+                            <div class="flex items-center gap-2">
+                                <a href="#">Syahrul S</a>
+                                <span class="cursor-pointer"
+                                    onclick="event.preventDefault(); this.closest('#user-points').querySelector('#detail-points').classList.toggle('hidden');">v</span>
+                            </div>
+                        </div>
+                        <span>100 XP</span>
+                    </div>
+                    <div class="flex flex-col hidden" id="detail-points">
+                        <div class="flex items-center gap-2 justify-end">
+                            <span>XXXX</span>
+                            <span>-</span>
+                            <span>100 XP</span>
+                        </div>
+                        <div class="flex items-center gap-2 justify-end">
+                            <span>XXXX</span>
+                            <span>-</span>
+                            <span>100 XP</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="py-4" id="user-points">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-2">
+                            <div class="w-8 h-8 text-center">4</div>
+                            <div class="w-10 h-10 bg-gray-300 rounded-full"></div>
+                            <div class="flex items-center gap-2">
+                                <a href="#">Syahrul S</a>
+                                <span class="cursor-pointer"
+                                    onclick="event.preventDefault(); this.closest('#user-points').querySelector('#detail-points').classList.toggle('hidden');">v</span>
+                            </div>
+                        </div>
+                        <span>100 XP</span>
+                    </div>
+                    <div class="flex flex-col hidden" id="detail-points">
+                        <div class="flex items-center gap-2 justify-end">
+                            <span>XXXX</span>
+                            <span>-</span>
+                            <span>100 XP</span>
+                        </div>
+                        <div class="flex items-center gap-2 justify-end">
+                            <span>XXXX</span>
+                            <span>-</span>
+                            <span>100 XP</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="py-4" id="user-points">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-2">
+                            <div class="w-8 h-8 text-center">5</div>
+                            <div class="w-10 h-10 bg-gray-300 rounded-full"></div>
+                            <div class="flex items-center gap-2">
+                                <a href="#">Syahrul S</a>
+                                <span class="cursor-pointer"
+                                    onclick="event.preventDefault(); this.closest('#user-points').querySelector('#detail-points').classList.toggle('hidden');">v</span>
+                            </div>
+                        </div>
+                        <span>100 XP</span>
+                    </div>
+                    <div class="flex flex-col hidden" id="detail-points">
+                        <div class="flex items-center gap-2 justify-end">
+                            <span>XXXX</span>
+                            <span>-</span>
+                            <span>100 XP</span>
+                        </div>
+                        <div class="flex items-center gap-2 justify-end">
+                            <span>XXXX</span>
+                            <span>-</span>
+                            <span>100 XP</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
 

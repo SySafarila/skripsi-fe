@@ -1,22 +1,22 @@
 const navbarActions = () => {
-  const nav = document.querySelector("nav");
   const navHamburger = document.querySelector("nav #hamburger");
-  const navBackdrop = document.querySelector("nav #backdrop");
+  const backdrop = document.querySelector("#nav-backdrop");
   const body = document.querySelector("body");
+  const sidebar = document.querySelector("#sidebar");
 
   const menusToggle = () => {
     body.classList.toggle("overflow-y-hidden");
-    nav.classList.toggle("active");
+    sidebar.classList.toggle("active");
 
-    if (navBackdrop.classList.contains("hidden")) {
-      navBackdrop.classList.toggle("hidden");
+    if (backdrop.classList.contains("hidden")) {
+      backdrop.classList.toggle("hidden");
       setTimeout(() => {
-        navBackdrop.classList.toggle("bg-black/50");
+        backdrop.classList.toggle("bg-black/50");
       }, 50);
     } else {
-      navBackdrop.classList.toggle("bg-black/50");
+      backdrop.classList.toggle("bg-black/50");
       setTimeout(() => {
-        navBackdrop.classList.toggle("hidden");
+        backdrop.classList.toggle("hidden");
       }, 150);
     }
   };
@@ -26,7 +26,7 @@ const navbarActions = () => {
     e.stopPropagation();
     menusToggle();
   });
-  navBackdrop.addEventListener("click", (e) => {
+  backdrop.addEventListener("click", (e) => {
     e.preventDefault();
     e.stopPropagation();
     menusToggle();

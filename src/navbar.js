@@ -1,12 +1,12 @@
 const navbarActions = () => {
-  const navMenus = document.querySelector("nav #menus");
+  const nav = document.querySelector("nav");
   const navHamburger = document.querySelector("nav #hamburger");
   const navBackdrop = document.querySelector("nav #backdrop");
   const body = document.querySelector("body");
 
   const menusToggle = () => {
     body.classList.toggle("overflow-y-hidden");
-    navMenus.classList.toggle("translate-x-full");
+    nav.classList.toggle("active");
 
     if (navBackdrop.classList.contains("hidden")) {
       navBackdrop.classList.toggle("hidden");

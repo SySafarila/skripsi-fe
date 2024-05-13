@@ -52,7 +52,7 @@
                 sarjana.</p>
         </div>
         <div id="content">
-            <form class="flex justify-center gap-2 lg:justify-start">
+            <form class="flex justify-center gap-2 lg:justify-start flex-wrap">
                 <select name="kpi" id="" class="rounded-md border px-4 py-2 appearance-none cursor-pointer"
                     onchange="event.preventDefault(); this.closest('form').submit();">
                     <option value="">Periode Aktif</option>
@@ -66,7 +66,10 @@
                     <option value="z">Staff</option>
                 </select>
             </form>
-            <p class="pt-2 text-center lg:text-left">*Akan berakhir dalam 9 Hari</p>
+            <div class="mt-2 flex items-start gap-2 rounded-md p-2 bg-yellow-300">
+                <img src="./assets/icons/warning.svg" alt="warning">
+                <span class="break-words">Periode KPI yang berlangsung akan berakhir dalam <b>9 Hari</b></span>
+            </div>
             <div class="flex flex-col py-2 divide-y">
                 <div class="py-4" id="user-points">
                     <div class="flex items-center justify-between">
@@ -74,22 +77,19 @@
                             <img src="./assets/icons/number-one.svg" alt="" class="w-8 h-8">
                             <img src="./assets/images/IU.jpeg" alt="profile" class="w-10 h-10 rounded-full">
                             <div class="flex flex-col">
-                                <!-- <span class="text-xs bg-yellow-400 py-0.5 px-3 rounded-lg uppercase w-fit">Dosen</span> -->
                                 <div class="flex flex-col">
                                     <!-- <span class="text-xs bg-yellow-400 py-0.5 px-3 rounded-lg uppercase w-fit">Dosen</span> -->
                                     <a href="#" class="font-semibold line-clamp-1">Syahrul S</a>
                                 </div>
                             </div>
                         </div>
-                        <div class="flex items-center gap-2">
+                        <div class="flex items-center gap-2 hover:bg-gray-100 px-2 py-1 rounded-md cursor-pointer"
+                            onclick="event.preventDefault(); this.closest('#user-points').querySelector('#detail-points').classList.toggle('hidden'); this.querySelector('img').classList.toggle('rotate-180')">
                             <span>100 XP</span>
-                            <span class="cursor-pointer transition-transform ease-in-out select-none"
-                                onclick="event.preventDefault(); this.closest('#user-points').querySelector('#detail-points').classList.toggle('hidden'); this.classList.toggle('rotate-180')">
-                                <img src="./assets/icons/chevron.svg" alt="arrow">
-                            </span>
+                            <img src="./assets/icons/chevron.svg" class="transition-transform ease-in-out" alt="arrow">
                         </div>
                     </div>
-                    <div class="flex flex-col hidden pr-8" id="detail-points">
+                    <div class="flex flex-col hidden pr-10" id="detail-points">
                         <div class="flex items-center gap-2 justify-end">
                             <span>XXXX</span>
                             <span>-</span>
@@ -108,19 +108,19 @@
                             <img src="./assets/icons/number-two.svg" alt="" class="w-8 h-8">
                             <img src="./assets/images/IU.jpeg" alt="profile" class="w-10 h-10 rounded-full">
                             <div class="flex flex-col">
-                                <!-- <span class="text-xs bg-yellow-400 py-0.5 px-3 rounded-lg uppercase w-fit">Dosen</span> -->
-                                <a href="#" class="font-semibold line-clamp-1">Syahrul S</a>
+                                <div class="flex flex-col">
+                                    <!-- <span class="text-xs bg-yellow-400 py-0.5 px-3 rounded-lg uppercase w-fit">Dosen</span> -->
+                                    <a href="#" class="font-semibold line-clamp-1">Syahrul S</a>
+                                </div>
                             </div>
                         </div>
-                        <div class="flex items-center gap-2">
+                        <div class="flex items-center gap-2 hover:bg-gray-100 px-2 py-1 rounded-md cursor-pointer"
+                            onclick="event.preventDefault(); this.closest('#user-points').querySelector('#detail-points').classList.toggle('hidden'); this.querySelector('img').classList.toggle('rotate-180')">
                             <span>100 XP</span>
-                            <span class="cursor-pointer transition-transform ease-in-out select-none"
-                                onclick="event.preventDefault(); this.closest('#user-points').querySelector('#detail-points').classList.toggle('hidden'); this.classList.toggle('rotate-180')">
-                                <img src="./assets/icons/chevron.svg" alt="arrow">
-                            </span>
+                            <img src="./assets/icons/chevron.svg" class="transition-transform ease-in-out" alt="arrow">
                         </div>
                     </div>
-                    <div class="flex flex-col hidden pr-8" id="detail-points">
+                    <div class="flex flex-col hidden pr-10" id="detail-points">
                         <div class="flex items-center gap-2 justify-end">
                             <span>XXXX</span>
                             <span>-</span>
@@ -139,19 +139,19 @@
                             <img src="./assets/icons/number-three.svg" alt="" class="w-8 h-8">
                             <img src="./assets/images/IU.jpeg" alt="profile" class="w-10 h-10 rounded-full">
                             <div class="flex flex-col">
-                                <!-- <span class="text-xs bg-yellow-400 py-0.5 px-3 rounded-lg uppercase w-fit">Dosen</span> -->
-                                <a href="#" class="font-semibold line-clamp-1">Syahrul S</a>
+                                <div class="flex flex-col">
+                                    <!-- <span class="text-xs bg-yellow-400 py-0.5 px-3 rounded-lg uppercase w-fit">Dosen</span> -->
+                                    <a href="#" class="font-semibold line-clamp-1">Syahrul S</a>
+                                </div>
                             </div>
                         </div>
-                        <div class="flex items-center gap-2">
+                        <div class="flex items-center gap-2 hover:bg-gray-100 px-2 py-1 rounded-md cursor-pointer"
+                            onclick="event.preventDefault(); this.closest('#user-points').querySelector('#detail-points').classList.toggle('hidden'); this.querySelector('img').classList.toggle('rotate-180')">
                             <span>100 XP</span>
-                            <span class="cursor-pointer transition-transform ease-in-out select-none"
-                                onclick="event.preventDefault(); this.closest('#user-points').querySelector('#detail-points').classList.toggle('hidden'); this.classList.toggle('rotate-180')">
-                                <img src="./assets/icons/chevron.svg" alt="arrow">
-                            </span>
+                            <img src="./assets/icons/chevron.svg" class="transition-transform ease-in-out" alt="arrow">
                         </div>
                     </div>
-                    <div class="flex flex-col hidden pr-8" id="detail-points">
+                    <div class="flex flex-col hidden pr-10" id="detail-points">
                         <div class="flex items-center gap-2 justify-end">
                             <span>XXXX</span>
                             <span>-</span>
@@ -174,15 +174,13 @@
                                 <a href="#" class="font-semibold line-clamp-1">Syahrul S</a>
                             </div>
                         </div>
-                        <div class="flex items-center gap-2">
+                        <div class="flex items-center gap-2 hover:bg-gray-100 px-2 py-1 rounded-md cursor-pointer"
+                            onclick="event.preventDefault(); this.closest('#user-points').querySelector('#detail-points').classList.toggle('hidden'); this.querySelector('img').classList.toggle('rotate-180')">
                             <span>100 XP</span>
-                            <span class="cursor-pointer transition-transform ease-in-out select-none"
-                                onclick="event.preventDefault(); this.closest('#user-points').querySelector('#detail-points').classList.toggle('hidden'); this.classList.toggle('rotate-180')">
-                                <img src="./assets/icons/chevron.svg" alt="arrow">
-                            </span>
+                            <img src="./assets/icons/chevron.svg" class="transition-transform ease-in-out" alt="arrow">
                         </div>
                     </div>
-                    <div class="flex flex-col hidden pr-8" id="detail-points">
+                    <div class="flex flex-col hidden pr-10" id="detail-points">
                         <div class="flex items-center gap-2 justify-end">
                             <span>XXXX</span>
                             <span>-</span>
@@ -205,15 +203,13 @@
                                 <a href="#" class="font-semibold line-clamp-1">Syahrul S</a>
                             </div>
                         </div>
-                        <div class="flex items-center gap-2">
+                        <div class="flex items-center gap-2 hover:bg-gray-100 px-2 py-1 rounded-md cursor-pointer"
+                            onclick="event.preventDefault(); this.closest('#user-points').querySelector('#detail-points').classList.toggle('hidden'); this.querySelector('img').classList.toggle('rotate-180')">
                             <span>100 XP</span>
-                            <span class="cursor-pointer transition-transform ease-in-out select-none"
-                                onclick="event.preventDefault(); this.closest('#user-points').querySelector('#detail-points').classList.toggle('hidden'); this.classList.toggle('rotate-180')">
-                                <img src="./assets/icons/chevron.svg" alt="arrow">
-                            </span>
+                            <img src="./assets/icons/chevron.svg" class="transition-transform ease-in-out" alt="arrow">
                         </div>
                     </div>
-                    <div class="flex flex-col hidden pr-8" id="detail-points">
+                    <div class="flex flex-col hidden pr-10" id="detail-points">
                         <div class="flex items-center gap-2 justify-end">
                             <span>XXXX</span>
                             <span>-</span>

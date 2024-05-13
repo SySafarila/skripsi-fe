@@ -9,37 +9,57 @@
 </head>
 
 <body>
-    <nav class="bg-black/30 h-12 fixed top-0 left-0 w-full flex items-center z-50">
+    <nav id="navbar">
         <div class="max-w-screen-lg w-full mx-auto flex items-center justify-between px-4">
-            <a href="#" id="brand">BRAND</a>
-            <button type="button" class="lg:hidden" id="hamburger">button</button>
+            <a href="#" id="brand" class="font-bold">BRAND</a>
+            <button type="button" class="lg:hidden" id="hamburger">
+                <img src="./assets/icons/menu.svg" alt="menu">
+            </button>
         </div>
     </nav>
     <main>
         <div id="sidebar">
             <a href="#" class="account">
-                <div class="w-10 h-10 bg-gray-300 rounded-full flex-shrink-0"></div>
+                <img src="./assets/images/IU.jpeg" alt="profile" class="w-10 h-10 rounded-full flex-shrink-0">
                 <div class="flex flex-col w-full">
                     <span class="font-bold line-clamp-1 break-all">Syahrul Safarila</span>
                     <small class="line-clamp-1">NIM: 192837</small>
                 </div>
             </a>
-            <a href="#" class="px-4 py-3 bg-green-400 hover:bg-green-600">Menu</a>
-            <a href="#" class="px-4 py-3 bg-green-400 hover:bg-green-600">Menu</a>
-            <a href="#" class="px-4 py-3 bg-green-400 hover:bg-green-600">Menu</a>
-            <a href="#" class="px-4 py-3 bg-green-400 hover:bg-green-600">Menu</a>
-            <a href="#" class="px-4 py-3 bg-green-400 hover:bg-green-600">Menu</a>
-            <p class="text-center py-3 px-4 text-xs">Program ini dibuat untuk menyelesaikan pendidikan</p>
+            <hr>
+            <a href="#" class="px-4 py-3 hover:bg-gray-100 lg:rounded-md flex items-center gap-x-2">
+                <img src="./assets/icons/home.svg" alt="home">
+                <span>Menu</span>
+            </a>
+            <a href="#" class="px-4 py-3 hover:bg-gray-100 lg:rounded-md flex items-center gap-x-2">
+                <img src="./assets/icons/home.svg" alt="home">
+                <span>Menu</span>
+            </a>
+            <a href="#" class="px-4 py-3 hover:bg-gray-100 lg:rounded-md flex items-center gap-x-2">
+                <img src="./assets/icons/home.svg" alt="home">
+                <span>Menu</span>
+            </a>
+            <a href="#" class="px-4 py-3 hover:bg-gray-100 lg:rounded-md flex items-center gap-x-2">
+                <img src="./assets/icons/home.svg" alt="home">
+                <span>Menu</span>
+            </a>
+            <a href="#" class="px-4 py-3 hover:bg-gray-100 lg:rounded-md flex items-center gap-x-2">
+                <img src="./assets/icons/home.svg" alt="home">
+                <span>Menu</span>
+            </a>
+            <hr>
+            <p class="text-center py-3 px-4 text-xs">Program ini dibuat sebagai syarat untuk menyelesaikan pendidikan
+                sarjana.</p>
         </div>
         <div id="content">
             <form class="flex justify-center gap-2 lg:justify-start">
-                <select name="kpi" id="" class="rounded-md border px-4 py-2 appearance-none"
+                <select name="kpi" id="" class="rounded-md border px-4 py-2 appearance-none cursor-pointer"
                     onchange="event.preventDefault(); this.closest('form').submit();">
                     <option value="">Periode Aktif</option>
                     <option value="b">Periode B</option>
                     <option value="c">Periode C</option>
                 </select>
-                <select name="users" id="" class="rounded-md border px-4 py-2 appearance-none"
+                <select name="users" id="" class="rounded-md border px-4 py-2 appearance-none cursor-pointer"
                     onchange="event.preventDefault(); this.closest('form').submit();">
                     <option value="">Semua Karyawan</option>
                     <option value="y">Dosen</option>
@@ -50,12 +70,14 @@
                 <div class="py-4" id="user-points">
                     <div class="flex items-center justify-between">
                         <div class="flex items-center gap-2">
-                            <div class="w-8 h-8 bg-gray-300"></div>
-                            <div class="w-10 h-10 bg-gray-300 rounded-full"></div>
+                            <img src="./assets/icons/number-one.svg" alt="" class="w-8 h-8">
+                            <img src="./assets/images/IU.jpeg" alt="profile" class="w-10 h-10 rounded-full">
                             <div class="flex items-center gap-2">
                                 <a href="#">Syahrul S</a>
-                                <span class="cursor-pointer"
-                                    onclick="event.preventDefault(); this.closest('#user-points').querySelector('#detail-points').classList.toggle('hidden');">v</span>
+                                <span class="cursor-pointer transition-transform ease-in-out select-none"
+                                    onclick="event.preventDefault(); this.closest('#user-points').querySelector('#detail-points').classList.toggle('hidden'); this.classList.toggle('rotate-180')">
+                                    <img src="./assets/icons/chevron.svg" alt="arrow">
+                                </span>
                             </div>
                         </div>
                         <span>100 XP</span>
@@ -76,12 +98,14 @@
                 <div class="py-4" id="user-points">
                     <div class="flex items-center justify-between">
                         <div class="flex items-center gap-2">
-                            <div class="w-8 h-8 bg-gray-300"></div>
-                            <div class="w-10 h-10 bg-gray-300 rounded-full"></div>
+                            <img src="./assets/icons/number-two.svg" alt="" class="w-8 h-8">
+                            <img src="./assets/images/IU.jpeg" alt="profile" class="w-10 h-10 rounded-full">
                             <div class="flex items-center gap-2">
                                 <a href="#">Syahrul S</a>
-                                <span class="cursor-pointer"
-                                    onclick="event.preventDefault(); this.closest('#user-points').querySelector('#detail-points').classList.toggle('hidden');">v</span>
+                                <span class="cursor-pointer transition-transform ease-in-out select-none"
+                                    onclick="event.preventDefault(); this.closest('#user-points').querySelector('#detail-points').classList.toggle('hidden'); this.classList.toggle('rotate-180')">
+                                    <img src="./assets/icons/chevron.svg" alt="arrow">
+                                </span>
                             </div>
                         </div>
                         <span>100 XP</span>
@@ -102,12 +126,14 @@
                 <div class="py-4" id="user-points">
                     <div class="flex items-center justify-between">
                         <div class="flex items-center gap-2">
-                            <div class="w-8 h-8 bg-gray-300"></div>
-                            <div class="w-10 h-10 bg-gray-300 rounded-full"></div>
+                            <img src="./assets/icons/number-three.svg" alt="" class="w-8 h-8">
+                            <img src="./assets/images/IU.jpeg" alt="profile" class="w-10 h-10 rounded-full">
                             <div class="flex items-center gap-2">
                                 <a href="#">Syahrul S</a>
-                                <span class="cursor-pointer"
-                                    onclick="event.preventDefault(); this.closest('#user-points').querySelector('#detail-points').classList.toggle('hidden');">v</span>
+                                <span class="cursor-pointer transition-transform ease-in-out select-none"
+                                    onclick="event.preventDefault(); this.closest('#user-points').querySelector('#detail-points').classList.toggle('hidden'); this.classList.toggle('rotate-180')">
+                                    <img src="./assets/icons/chevron.svg" alt="arrow">
+                                </span>
                             </div>
                         </div>
                         <span>100 XP</span>
@@ -128,12 +154,14 @@
                 <div class="py-4" id="user-points">
                     <div class="flex items-center justify-between">
                         <div class="flex items-center gap-2">
-                            <div class="w-8 h-8 text-center">4</div>
-                            <div class="w-10 h-10 bg-gray-300 rounded-full"></div>
+                            <div class="w-8 h-8 flex justify-center items-center font-semibold">4</div>
+                            <img src="./assets/images/IU.jpeg" alt="profile" class="w-10 h-10 rounded-full">
                             <div class="flex items-center gap-2">
                                 <a href="#">Syahrul S</a>
-                                <span class="cursor-pointer"
-                                    onclick="event.preventDefault(); this.closest('#user-points').querySelector('#detail-points').classList.toggle('hidden');">v</span>
+                                <span class="cursor-pointer transition-transform ease-in-out select-none"
+                                    onclick="event.preventDefault(); this.closest('#user-points').querySelector('#detail-points').classList.toggle('hidden'); this.classList.toggle('rotate-180')">
+                                    <img src="./assets/icons/chevron.svg" alt="arrow">
+                                </span>
                             </div>
                         </div>
                         <span>100 XP</span>
@@ -154,12 +182,14 @@
                 <div class="py-4" id="user-points">
                     <div class="flex items-center justify-between">
                         <div class="flex items-center gap-2">
-                            <div class="w-8 h-8 text-center">5</div>
-                            <div class="w-10 h-10 bg-gray-300 rounded-full"></div>
+                            <div class="w-8 h-8 flex justify-center items-center font-semibold">5</div>
+                            <img src="./assets/images/IU.jpeg" alt="profile" class="w-10 h-10 rounded-full">
                             <div class="flex items-center gap-2">
                                 <a href="#">Syahrul S</a>
-                                <span class="cursor-pointer"
-                                    onclick="event.preventDefault(); this.closest('#user-points').querySelector('#detail-points').classList.toggle('hidden');">v</span>
+                                <span class="cursor-pointer transition-transform ease-in-out select-none"
+                                    onclick="event.preventDefault(); this.closest('#user-points').querySelector('#detail-points').classList.toggle('hidden'); this.classList.toggle('rotate-180')">
+                                    <img src="./assets/icons/chevron.svg" alt="arrow">
+                                </span>
                             </div>
                         </div>
                         <span>100 XP</span>

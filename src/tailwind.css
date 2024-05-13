@@ -9,12 +9,16 @@
 }
 
 @layer components {
+    #navbar {
+        @apply bg-white border-b h-12 fixed top-0 left-0 w-full flex items-center z-50;
+    }
+
     #sidebar {
-        @apply fixed flex flex-col right-0 w-1/2 h-screen top-0 bg-red-400 overflow-y-auto transform translate-x-full transition-transform ease-in-out z-[60] lg:static lg:h-fit lg:w-[25rem] lg:translate-x-0 lg:z-40;
+        @apply fixed flex flex-col right-0 w-1/2 h-screen top-0 bg-white overflow-y-auto transform translate-x-full transition-transform ease-in-out z-[60] lg:static lg:h-fit lg:w-[25rem] lg:translate-x-0 lg:z-40 lg:pr-4;
     }
 
     #sidebar.active {
-        @apply fixed flex flex-col right-0 w-1/2 h-screen top-0 bg-red-400 overflow-y-auto transform transition-transform ease-in-out z-[60] translate-x-0 lg:static lg:h-fit lg:w-[25rem] lg:z-40;
+        @apply fixed flex flex-col right-0 w-1/2 h-screen top-0 bg-white overflow-y-auto transform transition-transform ease-in-out z-[60] translate-x-0 lg:static lg:h-fit lg:w-[25rem] lg:z-40 lg:pr-4;
     }
 
     #nav-backdrop {
@@ -22,14 +26,14 @@
     }
 
     #sidebar .account {
-        @apply flex items-center gap-2 px-4 py-3 hover:bg-black/20;
+        @apply flex items-center gap-2 px-4 py-3 hover:bg-gray-100 rounded-md;
     }
 
     main {
-        @apply mt-12 p-4 mx-auto max-w-screen-lg w-full lg:flex lg:gap-4;
+        @apply mt-12 p-4 mx-auto max-w-screen-lg w-full lg:flex lg:gap-0 lg:divide-x;
     }
 
     main #content {
-        @apply w-full;
+        @apply w-full lg:pl-4;
     }
 }
